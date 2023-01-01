@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "search";
+}
+
+<div class="d-flex justify-content-center mt-5">
+
+    <form action="" method="post">
+        <h2>Set your Load and unload Area</h2>
+        Load Location:<input type="text" name="customer-name" class="form-control" />
+        @Html.ValidationMessage("ProductId", new { @class = "text-danger" })<br />
+        Unload Location:<input type="text" name="ProductName" class="form-control" />
+        @Html.ValidationMessage("ProductName", new { @class = "text-danger" })<br />
+        <input type="submit" name="submit" class="btn btn-primary" />
+    </form>
+</div>
+

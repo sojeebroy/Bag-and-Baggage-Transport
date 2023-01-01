@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AspdotNetSummerDBModelStoreContainer" CdmEntityContainer="AspdotNetSummerDBEntities">
+    <EntitySetMapping Name="admins">
+      <EntityTypeMapping TypeName="AspdotNetSummerDBModel.admin">
+        <MappingFragment StoreEntitySet="admins">
+          <ScalarProperty Name="admin_id" ColumnName="admin_id" />
+          <ScalarProperty Name="admin_name" ColumnName="admin_name" />
+          <ScalarProperty Name="dob" ColumnName="dob" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="drivers">
+      <EntityTypeMapping TypeName="AspdotNetSummerDBModel.driver">
+        <MappingFragment StoreEntitySet="drivers">
+          <ScalarProperty Name="driver_id" ColumnName="driver_id" />
+          <ScalarProperty Name="driver_name" ColumnName="driver_name" />
+          <ScalarProperty Name="dob" ColumnName="dob" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="license_no" ColumnName="license_no" />
+          <ScalarProperty Name="driver_nid" ColumnName="driver_nid" />
+          <ScalarProperty Name="vechile_no" ColumnName="vechile_no" />
+          <ScalarProperty Name="vechile_type" ColumnName="vechile_type" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="manger_id" ColumnName="manger_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="labour_work_shedule">
+      <EntityTypeMapping TypeName="AspdotNetSummerDBModel.labour_work_shedule">
+        <MappingFragment StoreEntitySet="labour_work_shedule">
+          <ScalarProperty Name="labour_work_s_id" ColumnName="labour_work_s_id" />
+          <ScalarProperty Name="slot" ColumnName="slot" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="labours">
+      <EntityTypeMapping TypeName="AspdotNetSummerDBModel.labour">
+        <MappingFragment StoreEntitySet="labours">
+          <ScalarProperty Name="labour_id" ColumnName="labour_id" />
+          <ScalarProperty Name="labour_name" ColumnName="labour_name" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="managers">
+      <EntityTypeMapping TypeName="AspdotNetSummerDBModel.manager">
+        <MappingFragment StoreEntitySet="managers">
+          <ScalarProperty Name="manager_id" ColumnName="manager_id" />
+          <ScalarProperty Name="manager_name" ColumnName="manager_name" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trip_operations">
+      <EntityTypeMapping TypeName="AspdotNetSummerDBModel.trip_operations">
+        <MappingFragment StoreEntitySet="trip_operations">
+          <ScalarProperty Name="trip_id" ColumnName="trip_id" />
+          <ScalarProperty Name="start_location" ColumnName="start_location" />
+          <ScalarProperty Name="end_location" ColumnName="end_location" />
+          <ScalarProperty Name="vechile_type" ColumnName="vechile_type" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="labour_number" ColumnName="labour_number" />
+          <ScalarProperty Name="date_time" ColumnName="date_time" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="product_description" ColumnName="product_description" />
+          <ScalarProperty Name="customer_id" ColumnName="customer_id" />
+          <ScalarProperty Name="driver_id" ColumnName="driver_id" />
+          <ScalarProperty Name="labour_id" ColumnName="labour_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="AspdotNetSummerDBModel.user">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="user_type" ColumnName="user_type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="activity_logs">
+      <EntityTypeMapping TypeName="AspdotNetSummerDBModel.activity_logs">
+        <MappingFragment StoreEntitySet="activity_logs">
+          <ScalarProperty Name="activity_log_id" ColumnName="activity_log_id" />
+          <ScalarProperty Name="activity_type" ColumnName="activity_type" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="reviews">
+      <EntityTypeMapping TypeName="AspdotNetSummerDBModel.review">
+        <MappingFragment StoreEntitySet="reviews">
+          <ScalarProperty Name="review_id" ColumnName="review_id" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+          <ScalarProperty Name="review_date" ColumnName="review_date" />
+          <ScalarProperty Name="customer_id" ColumnName="customer_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="customers">
+      <EntityTypeMapping TypeName="AspdotNetSummerDBModel.customer">
+        <MappingFragment StoreEntitySet="customers">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="dob" ColumnName="dob" />
+          <ScalarProperty Name="customer_name" ColumnName="customer_name" />
+          <ScalarProperty Name="customer_id" ColumnName="customer_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

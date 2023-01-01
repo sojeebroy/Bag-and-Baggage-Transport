@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AspdotNetSummerDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'AspdotNetSummerDB.dbo.activity_logs' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="activity_logs">
+    <Key>
+      <PropertyRef Name="activity_log_id" />
+      <PropertyRef Name="activity_type" />
+      <PropertyRef Name="date" />
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="activity_log_id" Type="int" Nullable="false" />
+    <Property Name="activity_type" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="date" Type="date" Nullable="false" />
+    <Property Name="user_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="admins">
+    <Key>
+      <PropertyRef Name="admin_id" />
+    </Key>
+    <Property Name="admin_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="admin_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="dob" Type="date" Nullable="false" />
+    <Property Name="address" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="phone" Type="int" Nullable="false" />
+    <Property Name="user_id" Type="nchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="customers">
+    <Key>
+      <PropertyRef Name="customer_id" />
+    </Key>
+    <Property Name="customer_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="customer_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="dob" Type="date" Nullable="false" />
+    <Property Name="address" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="phone" Type="int" Nullable="false" />
+    <Property Name="user_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="drivers">
+    <Key>
+      <PropertyRef Name="driver_id" />
+    </Key>
+    <Property Name="driver_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="driver_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="dob" Type="date" Nullable="false" />
+    <Property Name="phone" Type="int" Nullable="false" />
+    <Property Name="license_no" Type="int" Nullable="false" />
+    <Property Name="driver_nid" Type="int" Nullable="false" />
+    <Property Name="vechile_no" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="vechile_type" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="user_id" Type="int" Nullable="false" />
+    <Property Name="manger_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="labour_work_shedule">
+    <Key>
+      <PropertyRef Name="labour_work_s_id" />
+    </Key>
+    <Property Name="labour_work_s_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="slot" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="status" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="labours">
+    <Key>
+      <PropertyRef Name="labour_id" />
+    </Key>
+    <Property Name="labour_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="labour_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="phone" Type="int" Nullable="false" />
+    <Property Name="address" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="user_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="managers">
+    <Key>
+      <PropertyRef Name="manager_id" />
+    </Key>
+    <Property Name="manager_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="manager_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="address" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="phone" Type="int" Nullable="false" />
+    <Property Name="user_id" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'AspdotNetSummerDB.dbo.reviews' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="reviews">
+    <Key>
+      <PropertyRef Name="review_id" />
+      <PropertyRef Name="comment" />
+      <PropertyRef Name="review_date" />
+      <PropertyRef Name="customer_id" />
+    </Key>
+    <Property Name="review_id" Type="int" Nullable="false" />
+    <Property Name="comment" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="review_date" Type="date" Nullable="false" />
+    <Property Name="customer_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="trip_operations">
+    <Key>
+      <PropertyRef Name="trip_id" />
+    </Key>
+    <Property Name="trip_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="start_location" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="end_location" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="vechile_type" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="price" Type="varchar" MaxLength="50" />
+    <Property Name="labour_number" Type="int" />
+    <Property Name="date_time" Type="datetime" Nullable="false" />
+    <Property Name="status" Type="varchar" MaxLength="50" />
+    <Property Name="product_description" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="customer_id" Type="int" Nullable="false" />
+    <Property Name="driver_id" Type="int" />
+    <Property Name="labour_id" Type="nchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="user_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="user_type" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="AspdotNetSummerDBModelStoreContainer">
+    <EntitySet Name="admins" EntityType="Self.admins" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="customers" EntityType="Self.customers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="drivers" EntityType="Self.drivers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="labour_work_shedule" EntityType="Self.labour_work_shedule" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="labours" EntityType="Self.labours" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="managers" EntityType="Self.managers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="trip_operations" EntityType="Self.trip_operations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="users" EntityType="Self.users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="activity_logs" EntityType="Self.activity_logs" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[activity_logs].[activity_log_id] AS [activity_log_id], 
+[activity_logs].[activity_type] AS [activity_type], 
+[activity_logs].[date] AS [date], 
+[activity_logs].[user_id] AS [user_id]
+FROM [dbo].[activity_logs] AS [activity_logs]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="reviews" EntityType="Self.reviews" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[reviews].[review_id] AS [review_id], 
+[reviews].[comment] AS [comment], 
+[reviews].[review_date] AS [review_date], 
+[reviews].[customer_id] AS [customer_id]
+FROM [dbo].[reviews] AS [reviews]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

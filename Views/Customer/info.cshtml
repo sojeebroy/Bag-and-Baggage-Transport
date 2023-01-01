@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "info";
+}
+
+<h2>info</h2>
+<div class="d-flex justify-content-center">
+    <form action="" method="post">
+        Name:<input type="text" name="customer-name" class="form-control" />
+        @Html.ValidationMessage("ProductId", new { @class = "text-danger" })<br />
+        Phone:<input type="text" name="ProductName" class="form-control" />
+        @Html.ValidationMessage("ProductName", new { @class = "text-danger" })<br />
+        Email:<input type="number" name="ProductPrice" class="form-control" />
+        @Html.ValidationMessage("ProductPrice", new { @class = "text-danger" })<br />
+        Date of Birth:<input type="number" name="Qnty" class="form-control" />
+        @Html.ValidationMessage("Qnty", new { @class = "text-danger" })<br />
+        Address:<input type="text" name="Description" class="form-control" />
+        @Html.ValidationMessage("Description", new { @class = "text-danger" })<br />
+        <input type="submit" name="submit" class="btn btn-primary" />
+    </form>
+</div>
+
